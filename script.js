@@ -1,3 +1,10 @@
-document.getElementById('greet-btn').addEventListener('click', function() {
-  alert('Hello! Thanks for visiting my website 😊');
+
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("#contact a");
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      console.log("Clicked contact link:", link.href);
+    });
+  });
 });
